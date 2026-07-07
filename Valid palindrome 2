@@ -1,0 +1,29 @@
+bool check_after(char* s,int start,int end)
+{
+    while(start<end)
+    {
+        if(s[start] != s[end])
+        return 0;
+        start++;
+        end--;
+    }
+    return 1;
+}
+
+
+
+
+bool validPalindrome(char* s) {
+    int start = 0;
+    int end = strlen(s) -1 ;
+
+    while(start<end)
+    {
+        if(s[start] != s[end])
+        return (check_after(s,start+1,end) || check_after(s,start,end-1)) ;
+        start++;
+        end--;
+    }
+    return 1;
+    
+}
