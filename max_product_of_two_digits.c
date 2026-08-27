@@ -3,7 +3,7 @@ int maxProduct(int n) {
     int temp=n;
     while(temp)
     {
-        temp /= 10;
+        temp /= 10;          //this is for counting the in the number 
         count++;
     }
 
